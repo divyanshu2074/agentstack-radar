@@ -14,7 +14,7 @@ const BASE_PATH = process.env.BASE_PATH !== undefined
 const ROOT_HREF = BASE_PATH ? `${BASE_PATH}/` : '/';
 
 const SITE_URL = process.env.SITE_URL || `https://${GITHUB_REPO.split('/')[0]}.github.io/${GITHUB_REPO.split('/')[1]}`;
-const GUMROAD_BUY_URL = 'https://gumroad.com/l/agentstack-atlas'; // Placeholder for user's Gumroad product link
+const GUMROAD_BUY_URL = 'https://divyanshu60.gumroad.com/l/xvebuq';
 const SUBSTACK_URL = 'https://agentstack.substack.com';
 
 function renderHeader(activePage = 'directory') {
