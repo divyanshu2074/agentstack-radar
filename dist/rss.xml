@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>AgentStack Radar - MCP & AI Agent Releases</title>
+  <link>https://agentstack-radar.pages.dev</link>
+  <description>Daily autonomous feed of newly verified Model Context Protocol tools and agent toolchains.</description>
+  <lastBuildDate>Fri, 30 Oct 2026 05:33:30 GMT</lastBuildDate>
+  
+    <item>
+      <title>Local Filesystem MCP Server (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-filesystem.html</link>
+      <description><![CDATA[Secure direct file read/write operations with strict directory boundary isolation. - Installation: npx -y @modelcontextprotocol/server-filesystem <allowed-directory>]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>GitHub Integration MCP Server (A Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-github.html</link>
+      <description><![CDATA[Autonomous pull requests, issue tracking, and repository management. - Installation: npx -y @modelcontextprotocol/server-github]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>PostgreSQL Schema & Query Engine (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-postgres.html</link>
+      <description><![CDATA[Read-only and parameterized query execution with automatic schema introspection. - Installation: npx -y @modelcontextprotocol/server-postgres <postgresql://user:pass@host:port/db>]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Brave Web & Local Search (A Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-brave-search.html</link>
+      <description><![CDATA[Privacy-first real-time web search and local business intelligence. - Installation: npx -y @modelcontextprotocol/server-brave-search]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Headless Browser Automation (Puppeteer) (B+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-puppeteer.html</link>
+      <description><![CDATA[End-to-end browser navigation, screenshot capture, and JavaScript rendering. - Installation: npx -y @modelcontextprotocol/server-puppeteer]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Docker & Container Runtime Controller (A Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-docker.html</link>
+      <description><![CDATA[Isolated container orchestration, log streaming, and image management. - Installation: docker run -i --rm -v /var/run/docker.sock:/var/run/docker.sock mcp/docker]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Slack Autonomous Operations (A- Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-slack.html</link>
+      <description><![CDATA[Channel listener, threaded replies, incident broadcast, and user notifications. - Installation: npx -y @modelcontextprotocol/server-slack]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Agent Guardrails & Secret Redactor (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-server-guardrails.html</link>
+      <description><![CDATA[Automated prompt injection defense, PII masking, and API key filtering. - Installation: pip install mcp-guardrails && mcp-guardrails run]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Rea (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/rea.html</link>
+      <description><![CDATA[Reverse engineer anything with agents, from app behavior down to native binaries.... - Installation: npx -y rea]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Nanobot (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/nanobot.html</link>
+      <description><![CDATA[Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, M... - Installation: npx -y nanobot]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Codebase Memory Mcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/codebase-memory-mcp.html</link>
+      <description><![CDATA[Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent gr... - Installation: npx -y codebase-memory-mcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Mcp For Blender (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-for-blender.html</link>
+      <description><![CDATA[Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender F... - Installation: npx -y mcp-for-blender]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Fastmcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/fastmcp.html</link>
+      <description><![CDATA[🚀 The fast, Pythonic way to build MCP servers and clients.... - Installation: npx -y fastmcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Editor (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/editor.html</link>
+      <description><![CDATA[Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI age... - Installation: npx -y editor]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Douyin TikTok Download API (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/douyin-tiktok-download-api.html</link>
+      <description><![CDATA[🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & ... - Installation: npx -y Douyin_TikTok_Download_API]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Xerj (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/xerj.html</link>
+      <description><![CDATA[AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and P... - Installation: npx -y xerj]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Mcp For Beginners (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp-for-beginners.html</link>
+      <description><![CDATA[This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cr... - Installation: npx -y mcp-for-beginners]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Unity Mcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/unity-mcp.html</link>
+      <description><![CDATA[Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, ... - Installation: npx -y unity-mcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>N8n (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/n8n.html</link>
+      <description><![CDATA[Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, ... - Installation: npx -y n8n]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Gemini Cli (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/gemini-cli.html</link>
+      <description><![CDATA[An open-source AI agent that brings the power of Gemini directly into your terminal.... - Installation: npx -y gemini-cli]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Scrapling (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/scrapling.html</link>
+      <description><![CDATA[🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't... - Installation: npx -y Scrapling]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Worldmonitor (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/worldmonitor.html</link>
+      <description><![CDATA[Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastruct... - Installation: npx -y worldmonitor]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Ruflo (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/ruflo.html</link>
+      <description><![CDATA[🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and bu... - Installation: npx -y ruflo]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Context7 (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/context7.html</link>
+      <description><![CDATA[Context7 Platform -- Up-to-date docs for AI agents... - Installation: npx -y context7]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>TrendRadar (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/trendradar.html</link>
+      <description><![CDATA[⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 ... - Installation: npx -y TrendRadar]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Chrome Devtools Mcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/chrome-devtools-mcp.html</link>
+      <description><![CDATA[Chrome DevTools for coding agents... - Installation: npx -y chrome-devtools-mcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Reactive Resume (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/reactive-resume.html</link>
+      <description><![CDATA[A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, ope... - Installation: npx -y reactive-resume]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Mcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/mcp.html</link>
+      <description><![CDATA[Open source MCP Servers for AWS... - Installation: npx -y mcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Awesome Mcp Servers (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/awesome-mcp-servers.html</link>
+      <description><![CDATA[A collection of MCP servers.... - Installation: npx -y awesome-mcp-servers]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Github Mcp Server (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/github-mcp-server.html</link>
+      <description><![CDATA[GitHub's official MCP Server... - Installation: npx -y github-mcp-server]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Playwright Mcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/playwright-mcp.html</link>
+      <description><![CDATA[Playwright MCP server... - Installation: npx -y playwright-mcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>Whatsapp Mcp (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/whatsapp-mcp.html</link>
+      <description><![CDATA[WhatsApp MCP server... - Installation: npx -y whatsapp-mcp]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+    <item>
+      <title>GhidraMCP (A+ Security)</title>
+      <link>https://agentstack-radar.pages.dev/items/ghidramcp.html</link>
+      <description><![CDATA[MCP Server for Ghidra... - Installation: npx -y GhidraMCP]]></description>
+      <pubDate>Fri, 30 Oct 2026 05:33:30 GMT</pubDate>
+    </item>
+  
+</channel>
+</rss>

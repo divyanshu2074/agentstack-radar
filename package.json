@@ -1,0 +1,25 @@
+{
+  "name": "agentstack-radar",
+  "version": "1.0.0",
+  "description": "Autonomous AI Agent & MCP Protocol Intelligence Engine - Strictly $0 Cost & 100% Automated",
+  "main": "scripts/cron-runner.js",
+  "type": "module",
+  "scripts": {
+    "scout": "node scripts/scout.js",
+    "enrich": "node scripts/enrich.js",
+    "assets": "node scripts/generate-assets.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/validate-schema.js",
+    "run:daily": "node scripts/cron-runner.js"
+  },
+  "keywords": [
+    "ai-agents",
+    "mcp",
+    "model-context-protocol",
+    "antigravity",
+    "autonomous-startup",
+    "developer-tools"
+  ],
+  "author": "AgentStack Team",
+  "license": "MIT"
+}

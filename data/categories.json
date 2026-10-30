@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dev-tools",
+    "name": "Developer & Engineering Tools",
+    "description": "Code exploration, git automation, debugging, and IDE extensions",
+    "icon": "code"
+  },
+  {
+    "id": "databases",
+    "name": "Databases & Vector Storage",
+    "description": "SQL, NoSQL, Vector DBs, and knowledge stores for AI models",
+    "icon": "database"
+  },
+  {
+    "id": "web-search",
+    "name": "Web Scraping & Search",
+    "description": "Real-time search, browser automation, and web intelligence",
+    "icon": "globe"
+  },
+  {
+    "id": "cloud-infra",
+    "name": "Cloud & DevOps Infrastructure",
+    "description": "AWS, GCP, Kubernetes, Docker, and CI/CD pipelines",
+    "icon": "cloud"
+  },
+  {
+    "id": "enterprise-saas",
+    "name": "Enterprise & SaaS Connectors",
+    "description": "Slack, Notion, Google Workspace, Linear, and CRM systems",
+    "icon": "briefcase"
+  },
+  {
+    "id": "security-audit",
+    "name": "Security, Governance & Observability",
+    "description": "Audit logging, secret scanning, guardrails, and compliance",
+    "icon": "shield"
+  }
+]

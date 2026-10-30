@@ -1,0 +1,753 @@
+{
+  "title": "AgentStack Enterprise MCP & Toolchain Atlas",
+  "version": "2026.Q4",
+  "generatedAt": "2026-10-30T05:33:30.666Z",
+  "totalItems": 33,
+  "license": "Commercial License for Purchaser",
+  "categories": [
+    {
+      "id": "dev-tools",
+      "name": "Developer & Engineering Tools",
+      "description": "Code exploration, git automation, debugging, and IDE extensions",
+      "icon": "code"
+    },
+    {
+      "id": "databases",
+      "name": "Databases & Vector Storage",
+      "description": "SQL, NoSQL, Vector DBs, and knowledge stores for AI models",
+      "icon": "database"
+    },
+    {
+      "id": "web-search",
+      "name": "Web Scraping & Search",
+      "description": "Real-time search, browser automation, and web intelligence",
+      "icon": "globe"
+    },
+    {
+      "id": "cloud-infra",
+      "name": "Cloud & DevOps Infrastructure",
+      "description": "AWS, GCP, Kubernetes, Docker, and CI/CD pipelines",
+      "icon": "cloud"
+    },
+    {
+      "id": "enterprise-saas",
+      "name": "Enterprise & SaaS Connectors",
+      "description": "Slack, Notion, Google Workspace, Linear, and CRM systems",
+      "icon": "briefcase"
+    },
+    {
+      "id": "security-audit",
+      "name": "Security, Governance & Observability",
+      "description": "Audit logging, secret scanning, guardrails, and compliance",
+      "icon": "shield"
+    }
+  ],
+  "items": [
+    {
+      "slug": "mcp-server-filesystem",
+      "name": "Local Filesystem MCP Server",
+      "category": "dev-tools",
+      "tagline": "Secure direct file read/write operations with strict directory boundary isolation.",
+      "description": "Enables LLM agents to securely inspect, read, and write project files within user-permitted directories. Fully implements sandboxed boundaries to prevent directory traversal attacks.",
+      "repo": "modelcontextprotocol/servers",
+      "stars": 12850,
+      "license": "MIT",
+      "install": "npx -y @modelcontextprotocol/server-filesystem <allowed-directory>",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": true,
+      "lastUpdated": "2026-10-28",
+      "tags": [
+        "filesystem",
+        "node",
+        "core",
+        "sandbox"
+      ]
+    },
+    {
+      "slug": "mcp-server-github",
+      "name": "GitHub Integration MCP Server",
+      "category": "dev-tools",
+      "tagline": "Autonomous pull requests, issue tracking, and repository management.",
+      "description": "Provides full read/write capabilities for GitHub repositories, including search, branching, PR review submission, commit generation, and automated issue triage.",
+      "repo": "modelcontextprotocol/servers",
+      "stars": 12850,
+      "license": "MIT",
+      "install": "npx -y @modelcontextprotocol/server-github",
+      "securityScore": "A",
+      "verified": true,
+      "featured": true,
+      "lastUpdated": "2026-10-29",
+      "tags": [
+        "github",
+        "git",
+        "ci-cd",
+        "devops"
+      ]
+    },
+    {
+      "slug": "mcp-server-postgres",
+      "name": "PostgreSQL Schema & Query Engine",
+      "category": "databases",
+      "tagline": "Read-only and parameterized query execution with automatic schema introspection.",
+      "description": "Allows AI agents to introspect database tables, extract foreign key relationships, generate execution plans, and execute parameterized queries with safe read-only guardrails.",
+      "repo": "modelcontextprotocol/servers",
+      "stars": 12850,
+      "license": "MIT",
+      "install": "npx -y @modelcontextprotocol/server-postgres <postgresql://user:pass@host:port/db>",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": true,
+      "lastUpdated": "2026-10-27",
+      "tags": [
+        "postgres",
+        "sql",
+        "database",
+        "analytics"
+      ]
+    },
+    {
+      "slug": "mcp-server-brave-search",
+      "name": "Brave Web & Local Search",
+      "category": "web-search",
+      "tagline": "Privacy-first real-time web search and local business intelligence.",
+      "description": "Powers real-time agent web search with zero ad tracking, returning structured snippets, full page previews, and fresh indexed results from Brave's independent search index.",
+      "repo": "modelcontextprotocol/servers",
+      "stars": 12850,
+      "license": "MIT",
+      "install": "npx -y @modelcontextprotocol/server-brave-search",
+      "securityScore": "A",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-26",
+      "tags": [
+        "search",
+        "web",
+        "privacy",
+        "brave"
+      ]
+    },
+    {
+      "slug": "mcp-server-puppeteer",
+      "name": "Headless Browser Automation (Puppeteer)",
+      "category": "web-search",
+      "tagline": "End-to-end browser navigation, screenshot capture, and JavaScript rendering.",
+      "description": "Provides autonomous web navigation, form filling, PDF generation, and DOM inspection for SPA applications behind dynamic client-side rendering.",
+      "repo": "modelcontextprotocol/servers",
+      "stars": 12850,
+      "license": "Apache-2.0",
+      "install": "npx -y @modelcontextprotocol/server-puppeteer",
+      "securityScore": "B+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-28",
+      "tags": [
+        "puppeteer",
+        "browser",
+        "scraping",
+        "headless"
+      ]
+    },
+    {
+      "slug": "mcp-server-docker",
+      "name": "Docker & Container Runtime Controller",
+      "category": "cloud-infra",
+      "tagline": "Isolated container orchestration, log streaming, and image management.",
+      "description": "Allows AI agents to spin up ephemeral microservices, monitor container stdout/stderr in real-time, execute commands within isolated environments, and prune stale images.",
+      "repo": "docker/mcp-server-docker",
+      "stars": 4920,
+      "license": "Apache-2.0",
+      "install": "docker run -i --rm -v /var/run/docker.sock:/var/run/docker.sock mcp/docker",
+      "securityScore": "A",
+      "verified": true,
+      "featured": true,
+      "lastUpdated": "2026-10-29",
+      "tags": [
+        "docker",
+        "containers",
+        "devops",
+        "cloud"
+      ]
+    },
+    {
+      "slug": "mcp-server-slack",
+      "name": "Slack Autonomous Operations",
+      "category": "enterprise-saas",
+      "tagline": "Channel listener, threaded replies, incident broadcast, and user notifications.",
+      "description": "Enables multi-agent systems to broadcast critical incident updates, listen to user inquiries, schedule team summaries, and manage reactions in workplace Slack channels.",
+      "repo": "modelcontextprotocol/servers",
+      "stars": 12850,
+      "license": "MIT",
+      "install": "npx -y @modelcontextprotocol/server-slack",
+      "securityScore": "A-",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-25",
+      "tags": [
+        "slack",
+        "saas",
+        "team",
+        "notifications"
+      ]
+    },
+    {
+      "slug": "mcp-server-guardrails",
+      "name": "Agent Guardrails & Secret Redactor",
+      "category": "security-audit",
+      "tagline": "Automated prompt injection defense, PII masking, and API key filtering.",
+      "description": "A high-performance security proxy that intercepts agent tool calls to sanitize outbound credentials, filter sensitive customer PII, and block malicious injection sequences.",
+      "repo": "guardrails-ai/mcp-guardrails",
+      "stars": 3410,
+      "license": "Apache-2.0",
+      "install": "pip install mcp-guardrails && mcp-guardrails run",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": true,
+      "lastUpdated": "2026-10-29",
+      "tags": [
+        "security",
+        "guardrails",
+        "pii",
+        "audit"
+      ]
+    },
+    {
+      "slug": "rea",
+      "name": "Rea",
+      "category": "dev-tools",
+      "tagline": "Reverse engineer anything with agents, from app behavior down to native binaries....",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "repo": "morluto/rea",
+      "stars": 408780,
+      "license": "MIT",
+      "install": "npx -y rea",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agent-skills",
+        "ai-agents",
+        "binary-analysis",
+        "claude-code",
+        "cli"
+      ]
+    },
+    {
+      "slug": "nanobot",
+      "name": "Nanobot",
+      "category": "web-search",
+      "tagline": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, M...",
+      "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+      "repo": "HKUDS/nanobot",
+      "stars": 49654,
+      "license": "MIT",
+      "install": "npx -y nanobot",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agent-framework",
+        "ai-agent",
+        "ai-agents",
+        "chatbot",
+        "chatops"
+      ]
+    },
+    {
+      "slug": "codebase-memory-mcp",
+      "name": "Codebase Memory Mcp",
+      "category": "databases",
+      "tagline": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent gr...",
+      "description": "Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent graph, with CBM Lens, MCP tools, agent integrations and change-aware test selection.",
+      "repo": "DeusData/codebase-memory-mcp",
+      "stars": 47810,
+      "license": "MIT",
+      "install": "npx -y codebase-memory-mcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "aider",
+        "ast",
+        "claude-code",
+        "code-analysis",
+        "code-intelligence"
+      ]
+    },
+    {
+      "slug": "mcp-for-blender",
+      "name": "Mcp For Blender",
+      "category": "dev-tools",
+      "tagline": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender F...",
+      "description": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
+      "repo": "ahujasid/mcp-for-blender",
+      "stars": 32744,
+      "license": "MIT",
+      "install": "npx -y mcp-for-blender",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "3d-modeling",
+        "ai",
+        "blender",
+        "blender-addon",
+        "blender-mcp"
+      ]
+    },
+    {
+      "slug": "fastmcp",
+      "name": "Fastmcp",
+      "category": "dev-tools",
+      "tagline": "🚀 The fast, Pythonic way to build MCP servers and clients....",
+      "description": "🚀 The fast, Pythonic way to build MCP servers and clients.",
+      "repo": "PrefectHQ/fastmcp",
+      "stars": 28240,
+      "license": "Apache-2.0",
+      "install": "npx -y fastmcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agents",
+        "fastmcp",
+        "llms",
+        "mcp",
+        "mcp-clients"
+      ]
+    },
+    {
+      "slug": "editor",
+      "name": "Editor",
+      "category": "dev-tools",
+      "tagline": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI age...",
+      "description": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
+      "repo": "pascalorg/editor",
+      "stars": 25220,
+      "license": "MIT",
+      "install": "npx -y editor",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "3d",
+        "agent-skills",
+        "ai-agents",
+        "architecture",
+        "bim"
+      ]
+    },
+    {
+      "slug": "douyin-tiktok-download-api",
+      "name": "Douyin TikTok Download API",
+      "category": "databases",
+      "tagline": "🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & ...",
+      "description": "🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & Bilibili scraper and no-watermark video downloader — async REST API, MCP server for AI agents, CLI and web console, plus offline speech-to-text for downloaded videos. Self-healing identity pool, PostgreSQL archive, one docker compose up.",
+      "repo": "Evil0ctal/Douyin_TikTok_Download_API",
+      "stars": 20988,
+      "license": "Apache-2.0",
+      "install": "npx -y Douyin_TikTok_Download_API",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "bilibili",
+        "crawler",
+        "data-collection",
+        "douyin",
+        "douyin-api"
+      ]
+    },
+    {
+      "slug": "xerj",
+      "name": "Xerj",
+      "category": "databases",
+      "tagline": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and P...",
+      "description": "AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
+      "repo": "xerj-org/xerj",
+      "stars": 17602,
+      "license": "Apache-2.0",
+      "install": "npx -y xerj",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agent-memory",
+        "ai-agents",
+        "bm25",
+        "claude-code",
+        "cli"
+      ]
+    },
+    {
+      "slug": "mcp-for-beginners",
+      "name": "Mcp For Beginners",
+      "category": "security-audit",
+      "tagline": "This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cr...",
+      "description": "This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cross-language examples in .NET, Java, TypeScript, JavaScript, Rust and Python. Designed for developers, it focuses on practical techniques for building modular, scalable, and secure AI workflows from session setup to service orchestration.",
+      "repo": "microsoft/mcp-for-beginners",
+      "stars": 17547,
+      "license": "MIT",
+      "install": "npx -y mcp-for-beginners",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "csharp",
+        "java",
+        "javascript",
+        "javascript-applications",
+        "mcp"
+      ]
+    },
+    {
+      "slug": "unity-mcp",
+      "name": "Unity Mcp",
+      "category": "dev-tools",
+      "tagline": "Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, ...",
+      "description": "Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
+      "repo": "CoplayDev/unity-mcp",
+      "stars": 15545,
+      "license": "MIT",
+      "install": "npx -y unity-mcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "ai-integration",
+        "anthropic",
+        "claude",
+        "copilot"
+      ]
+    },
+    {
+      "slug": "n8n",
+      "name": "N8n",
+      "category": "cloud-infra",
+      "tagline": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, ...",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "repo": "n8n-io/n8n",
+      "stars": 209072,
+      "license": "NOASSERTION",
+      "install": "npx -y n8n",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "apis",
+        "automation",
+        "cli",
+        "data-flow"
+      ]
+    },
+    {
+      "slug": "gemini-cli",
+      "name": "Gemini Cli",
+      "category": "dev-tools",
+      "tagline": "An open-source AI agent that brings the power of Gemini directly into your terminal....",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "repo": "google-gemini/gemini-cli",
+      "stars": 108624,
+      "license": "Apache-2.0",
+      "install": "npx -y gemini-cli",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "ai-agents",
+        "cli",
+        "gemini",
+        "gemini-api"
+      ]
+    },
+    {
+      "slug": "scrapling",
+      "name": "Scrapling",
+      "category": "web-search",
+      "tagline": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't...",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "repo": "D4Vinci/Scrapling",
+      "stars": 90348,
+      "license": "BSD-3-Clause",
+      "install": "npx -y Scrapling",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "ai-scraping",
+        "automation",
+        "crawler",
+        "crawling"
+      ]
+    },
+    {
+      "slug": "worldmonitor",
+      "name": "Worldmonitor",
+      "category": "dev-tools",
+      "tagline": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastruct...",
+      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+      "repo": "koala73/worldmonitor",
+      "stars": 89770,
+      "license": "AGPL-3.0",
+      "install": "npx -y worldmonitor",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agent",
+        "ai",
+        "dashboard",
+        "geopolitics",
+        "mcp"
+      ]
+    },
+    {
+      "slug": "ruflo",
+      "name": "Ruflo",
+      "category": "databases",
+      "tagline": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and bu...",
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "repo": "ruvnet/ruflo",
+      "stars": 80175,
+      "license": "MIT",
+      "install": "npx -y ruflo",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "agents",
+        "ai-agents"
+      ]
+    },
+    {
+      "slug": "context7",
+      "name": "Context7",
+      "category": "dev-tools",
+      "tagline": "Context7 Platform -- Up-to-date docs for AI agents...",
+      "description": "Context7 Platform -- Up-to-date docs for AI agents",
+      "repo": "upstash/context7",
+      "stars": 63931,
+      "license": "MIT",
+      "install": "npx -y context7",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "llm",
+        "mcp",
+        "mcp-server",
+        "vibe-coding"
+      ]
+    },
+    {
+      "slug": "trendradar",
+      "name": "TrendRadar",
+      "category": "cloud-infra",
+      "tagline": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 ...",
+      "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
+      "repo": "sansan0/TrendRadar",
+      "stars": 63305,
+      "license": "GPL-3.0",
+      "install": "npx -y TrendRadar",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "bark",
+        "data-analysis",
+        "docker",
+        "hot-news"
+      ]
+    },
+    {
+      "slug": "chrome-devtools-mcp",
+      "name": "Chrome Devtools Mcp",
+      "category": "web-search",
+      "tagline": "Chrome DevTools for coding agents...",
+      "description": "Chrome DevTools for coding agents",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "stars": 54466,
+      "license": "Apache-2.0",
+      "install": "npx -y chrome-devtools-mcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "browser",
+        "chrome",
+        "chrome-devtools",
+        "debugging",
+        "devtools"
+      ]
+    },
+    {
+      "slug": "reactive-resume",
+      "name": "Reactive Resume",
+      "category": "security-audit",
+      "tagline": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, ope...",
+      "description": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
+      "repo": "reactive-resume/reactive-resume",
+      "stars": 45083,
+      "license": "MIT",
+      "install": "npx -y reactive-resume",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "agent-skills",
+        "ai",
+        "dsh-plugin",
+        "hacktoberfest",
+        "javascript"
+      ]
+    },
+    {
+      "slug": "mcp",
+      "name": "Mcp",
+      "category": "cloud-infra",
+      "tagline": "Open source MCP Servers for AWS...",
+      "description": "Open source MCP Servers for AWS",
+      "repo": "awslabs/mcp",
+      "stars": 9851,
+      "license": "Apache-2.0",
+      "install": "npx -y mcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "aws",
+        "mcp",
+        "mcp-client",
+        "mcp-clients",
+        "mcp-host"
+      ]
+    },
+    {
+      "slug": "awesome-mcp-servers",
+      "name": "Awesome Mcp Servers",
+      "category": "dev-tools",
+      "tagline": "A collection of MCP servers....",
+      "description": "A collection of MCP servers.",
+      "repo": "punkpeye/awesome-mcp-servers",
+      "stars": 97054,
+      "license": "MIT",
+      "install": "npx -y awesome-mcp-servers",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "mcp"
+      ]
+    },
+    {
+      "slug": "github-mcp-server",
+      "name": "Github Mcp Server",
+      "category": "dev-tools",
+      "tagline": "GitHub's official MCP Server...",
+      "description": "GitHub's official MCP Server",
+      "repo": "github/github-mcp-server",
+      "stars": 34074,
+      "license": "MIT",
+      "install": "npx -y github-mcp-server",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "github",
+        "mcp",
+        "mcp-server"
+      ]
+    },
+    {
+      "slug": "playwright-mcp",
+      "name": "Playwright Mcp",
+      "category": "dev-tools",
+      "tagline": "Playwright MCP server...",
+      "description": "Playwright MCP server",
+      "repo": "microsoft/playwright-mcp",
+      "stars": 38833,
+      "license": "Apache-2.0",
+      "install": "npx -y playwright-mcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "mcp",
+        "playwright"
+      ]
+    },
+    {
+      "slug": "whatsapp-mcp",
+      "name": "Whatsapp Mcp",
+      "category": "dev-tools",
+      "tagline": "WhatsApp MCP server...",
+      "description": "WhatsApp MCP server",
+      "repo": "lharries/whatsapp-mcp",
+      "stars": 6770,
+      "license": "MIT",
+      "install": "npx -y whatsapp-mcp",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "ai",
+        "mcp",
+        "whatsapp",
+        "whatsapp-api"
+      ]
+    },
+    {
+      "slug": "ghidramcp",
+      "name": "GhidraMCP",
+      "category": "dev-tools",
+      "tagline": "MCP Server for Ghidra...",
+      "description": "MCP Server for Ghidra",
+      "repo": "LaurieWired/GhidraMCP",
+      "stars": 11646,
+      "license": "Apache-2.0",
+      "install": "npx -y GhidraMCP",
+      "securityScore": "A+",
+      "verified": true,
+      "featured": false,
+      "lastUpdated": "2026-10-30",
+      "tags": [
+        "mcp",
+        "agents",
+        "ai"
+      ]
+    }
+  ]
+}

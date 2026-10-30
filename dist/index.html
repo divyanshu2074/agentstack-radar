@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentStack Radar - The Autonomous MCP & AI Agent Toolchain Directory</title>
+  <meta name="description" content="Discover, benchmark and deploy Model Context Protocol (MCP) servers and autonomous AI agent toolchains. Live, autonomous 24/7 intelligence index.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-950 selection:bg-cyan-500 selection:text-slate-950">
+  
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center font-black text-slate-950 text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition">
+            ⚡
+          </div>
+          <div>
+            <div class="font-extrabold text-lg tracking-tight text-white flex items-center gap-2">
+              AgentStack <span class="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Radar</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-950/80 text-cyan-400 border border-cyan-800/60">AUTONOMOUS</span>
+            </div>
+            <div class="text-[11px] text-slate-400">Model Context Protocol & AI Agent Toolchains</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="/" class="text-cyan-400 transition">Directory</a>
+          <a href="#categories" class="text-slate-300 hover:text-white transition">Categories</a>
+          <a href="#pricing" class="text-slate-300 hover:text-white transition">Enterprise Dataset</a>
+          <a href="https://agentstack.substack.com" target="_blank" class="text-slate-300 hover:text-white transition flex items-center gap-1">Newsletter ↗</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="https://gumroad.com/l/agentstack-atlas" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-400 font-mono text-xs border border-slate-700 hover:border-cyan-500/50 transition">
+            <span>Enterprise Atlas ($9)</span>
+          </a>
+          <a href="#sponsor" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-slate-950 font-bold text-xs tracking-wide shadow-md shadow-cyan-500/20 hover:scale-105 transition">
+            + Submit Tool
+          </a>
+        </div>
+      </div>
+    </header>
+  
+
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-12 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-900/50 to-transparent">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.15),rgba(255,255,255,0))]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/70 border border-cyan-800/60 text-cyan-300 text-xs font-mono mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>INDEX UPDATED DAILY • 33 VERIFIED TOOLCHAINS</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-4xl mx-auto">
+        The Autonomous Intelligence Registry for <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">MCP & AI Agents</span>
+      </h1>
+      
+      <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Discover verified Model Context Protocol (MCP) servers, sandboxed filesystem integrations, database connectors, and autonomous agent toolchains.
+      </p>
+
+      <!-- Search & Filters Input -->
+      <div class="max-w-2xl mx-auto mb-8">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Search by tool name, category, command (e.g. postgres, docker, search)..." 
+            class="w-full bg-slate-900/90 border border-slate-700/80 focus:border-cyan-400 rounded-xl px-5 py-3.5 pl-12 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 shadow-xl transition"
+          />
+          <div class="absolute left-4 top-3.5 text-slate-400">
+            🔍
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex items-center justify-center flex-wrap gap-2 max-w-4xl mx-auto" id="categoryFilters">
+        <button class="cat-pill active px-3.5 py-1.5 rounded-lg text-xs font-medium bg-cyan-500 text-slate-950 shadow-sm transition" data-filter="all">All Tools (33)</button>
+        
+          <button class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition" data-filter="dev-tools">
+            Developer & Engineering Tools
+          </button>
+        
+          <button class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition" data-filter="databases">
+            Databases & Vector Storage
+          </button>
+        
+          <button class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition" data-filter="web-search">
+            Web Scraping & Search
+          </button>
+        
+          <button class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition" data-filter="cloud-infra">
+            Cloud & DevOps Infrastructure
+          </button>
+        
+          <button class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition" data-filter="enterprise-saas">
+            Enterprise & SaaS Connectors
+          </button>
+        
+          <button class="cat-pill px-3.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 transition" data-filter="security-audit">
+            Security, Governance & Observability
+          </button>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsor Banner & Monetization CTA -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10 w-full" id="sponsor">
+    <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-cyan-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl shadow-cyan-950/40">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-2xl">
+          🚀
+        </div>
+        <div>
+          <div class="font-bold text-white text-sm flex items-center gap-2">
+            Feature Your Tool or MCP Server Here
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-mono">1 SLOT AVAILABLE</span>
+          </div>
+          <div class="text-xs text-slate-400">Get highlighted before 50,000+ AI engineers, enterprise architects, and builders.</div>
+        </div>
+      </div>
+      <a href="https://gumroad.com/l/agentstack-atlas" target="_blank" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs shadow-lg shadow-cyan-500/20 tracking-wide transition whitespace-nowrap">
+        Book Placement ($29/mo) →
+      </a>
+    </div>
+  </section>
+
+  <!-- Directory Cards Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full" id="directory">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+          Verified Toolchains & MCP Registry
+        </h2>
+        <p class="text-xs text-slate-400 mt-1">Autonomous security ratings and quick installation commands.</p>
+      </div>
+      <div class="text-xs font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-900/50 px-3 py-1 rounded-md" id="resultCount">
+        Showing 33 items
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="itemsGrid">
+      
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="local filesystem mcp server secure direct file read/write operations with strict directory boundary isolation. filesystem node core sandbox">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-filesystem.html">Local Filesystem MCP Server</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Secure direct file read/write operations with strict directory boundary isolation.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y @modelcontextprotocol/server-filesystem <allowed-directory></span>
+          <button onclick="navigator.clipboard.writeText('npx -y @modelcontextprotocol/server-filesystem <allowed-directory>'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 12,850
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-server-filesystem.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="github integration mcp server autonomous pull requests, issue tracking, and repository management. github git ci-cd devops">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-github.html">GitHub Integration MCP Server</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Autonomous pull requests, issue tracking, and repository management.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y @modelcontextprotocol/server-github</span>
+          <button onclick="navigator.clipboard.writeText('npx -y @modelcontextprotocol/server-github'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 12,850
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-server-github.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="databases" data-search="postgresql schema & query engine read-only and parameterized query execution with automatic schema introspection. postgres sql database analytics">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-postgres.html">PostgreSQL Schema & Query Engine</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Read-only and parameterized query execution with automatic schema introspection.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y @modelcontextprotocol/server-postgres <postgresql://user:pass@host:port/db></span>
+          <button onclick="navigator.clipboard.writeText('npx -y @modelcontextprotocol/server-postgres <postgresql://user:pass@host:port/db>'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 12,850
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-server-postgres.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="web-search" data-search="brave web & local search privacy-first real-time web search and local business intelligence. search web privacy brave">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-brave-search.html">Brave Web & Local Search</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Privacy-first real-time web search and local business intelligence.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y @modelcontextprotocol/server-brave-search</span>
+          <button onclick="navigator.clipboard.writeText('npx -y @modelcontextprotocol/server-brave-search'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 12,850
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-server-brave-search.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="web-search" data-search="headless browser automation (puppeteer) end-to-end browser navigation, screenshot capture, and javascript rendering. puppeteer browser scraping headless">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-puppeteer.html">Headless Browser Automation (Puppeteer)</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-950 text-amber-400 border border-amber-800/60">B+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          End-to-end browser navigation, screenshot capture, and JavaScript rendering.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y @modelcontextprotocol/server-puppeteer</span>
+          <button onclick="navigator.clipboard.writeText('npx -y @modelcontextprotocol/server-puppeteer'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 12,850
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/mcp-server-puppeteer.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="cloud-infra" data-search="docker & container runtime controller isolated container orchestration, log streaming, and image management. docker containers devops cloud">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-docker.html">Docker & Container Runtime Controller</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Isolated container orchestration, log streaming, and image management.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ docker run -i --rm -v /var/run/docker.sock:/var/run/docker.sock mcp/docker</span>
+          <button onclick="navigator.clipboard.writeText('docker run -i --rm -v /var/run/docker.sock:/var/run/docker.sock mcp/docker'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 4,920
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/mcp-server-docker.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="enterprise-saas" data-search="slack autonomous operations channel listener, threaded replies, incident broadcast, and user notifications. slack saas team notifications">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-slack.html">Slack Autonomous Operations</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A- Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Channel listener, threaded replies, incident broadcast, and user notifications.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y @modelcontextprotocol/server-slack</span>
+          <button onclick="navigator.clipboard.writeText('npx -y @modelcontextprotocol/server-slack'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 12,850
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-server-slack.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="security-audit" data-search="agent guardrails & secret redactor automated prompt injection defense, pii masking, and api key filtering. security guardrails pii audit">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-server-guardrails.html">Agent Guardrails & Secret Redactor</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Automated prompt injection defense, PII masking, and API key filtering.
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ pip install mcp-guardrails && mcp-guardrails run</span>
+          <button onclick="navigator.clipboard.writeText('pip install mcp-guardrails && mcp-guardrails run'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 3,410
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/mcp-server-guardrails.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="rea reverse engineer anything with agents, from app behavior down to native binaries.... agent-skills ai-agents binary-analysis claude-code cli">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/rea.html">Rea</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Reverse engineer anything with agents, from app behavior down to native binaries....
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y rea</span>
+          <button onclick="navigator.clipboard.writeText('npx -y rea'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 408,780
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/rea.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="web-search" data-search="nanobot ultra-lightweight, open-source, self-hosted personal ai agent framework in python with webui, tools, memory, m... agent-framework ai-agent ai-agents chatbot chatops">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/nanobot.html">Nanobot</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, M...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y nanobot</span>
+          <button onclick="navigator.clipboard.writeText('npx -y nanobot'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 49,654
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/nanobot.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="databases" data-search="codebase memory mcp local code intelligence for developers and ai agents. connect code, docs and infrastructure in a persistent gr... aider ast claude-code code-analysis code-intelligence">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/codebase-memory-mcp.html">Codebase Memory Mcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Local code intelligence for developers and AI agents. Connect code, docs and infrastructure in a persistent gr...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y codebase-memory-mcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y codebase-memory-mcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 47,810
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/codebase-memory-mcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="mcp for blender community plugin to control blender 3d with any llm of your choice. not affiliated with the official blender f... 3d-modeling ai blender blender-addon blender-mcp">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-for-blender.html">Mcp For Blender</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender F...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y mcp-for-blender</span>
+          <button onclick="navigator.clipboard.writeText('npx -y mcp-for-blender'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 32,744
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-for-blender.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="fastmcp 🚀 the fast, pythonic way to build mcp servers and clients.... agents fastmcp llms mcp mcp-clients">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/fastmcp.html">Fastmcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          🚀 The fast, Pythonic way to build MCP servers and clients....
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y fastmcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y fastmcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 28,240
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/fastmcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="editor open-source 3d architectural editor with a local cli, mcp tools, and practical workflows for humans and ai age... 3d agent-skills ai-agents architecture bim">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/editor.html">Editor</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI age...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y editor</span>
+          <button onclick="navigator.clipboard.writeText('npx -y editor'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 25,220
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/editor.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="databases" data-search="douyin tiktok download api 🚀 自托管的抖音、tiktok、b 站数据采集与无水印视频下载 api，支持 ai agent 通过 mcp 调用与离线语音转文字，docker 一键部署。| self-hosted tiktok, douyin & ... bilibili crawler data-collection douyin douyin-api">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/douyin-tiktok-download-api.html">Douyin TikTok Download API</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & ...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y Douyin_TikTok_Download_API</span>
+          <button onclick="navigator.clipboard.writeText('npx -y Douyin_TikTok_Download_API'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 20,988
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/douyin-tiktok-download-api.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="databases" data-search="xerj ai search engine and mcp server for bots and agents. one rust binary indexes code, docs, logs, jsonl/csv and p... agent-memory ai-agents bm25 claude-code cli">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/xerj.html">Xerj</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          AI search engine and MCP server for bots and agents. One Rust binary indexes code, docs, logs, JSONL/CSV and P...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y xerj</span>
+          <button onclick="navigator.clipboard.writeText('npx -y xerj'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 17,602
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/xerj.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="security-audit" data-search="mcp for beginners this open-source curriculum introduces the fundamentals of model context protocol (mcp) through real-world, cr... csharp java javascript javascript-applications mcp">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp-for-beginners.html">Mcp For Beginners</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          This open-source curriculum introduces the fundamentals of Model Context Protocol (MCP) through real-world, cr...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y mcp-for-beginners</span>
+          <button onclick="navigator.clipboard.writeText('npx -y mcp-for-beginners'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 17,547
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/mcp-for-beginners.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="unity mcp unity mcp acts as a bridge between ai assistants and your unity editor. give your llm tools to manage assets, ... ai ai-integration anthropic claude copilot">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/unity-mcp.html">Unity Mcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, ...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y unity-mcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y unity-mcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 15,545
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/unity-mcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="cloud-infra" data-search="n8n fair-code workflow automation platform with native ai capabilities. combine visual building with custom code, ... ai apis automation cli data-flow">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/n8n.html">N8n</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, ...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y n8n</span>
+          <button onclick="navigator.clipboard.writeText('npx -y n8n'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 209,072
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">NOASSERTION</span>
+          </div>
+          <a href="/items/n8n.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="gemini cli an open-source ai agent that brings the power of gemini directly into your terminal.... ai ai-agents cli gemini gemini-api">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/gemini-cli.html">Gemini Cli</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          An open-source AI agent that brings the power of Gemini directly into your terminal....
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y gemini-cli</span>
+          <button onclick="navigator.clipboard.writeText('npx -y gemini-cli'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 108,624
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/gemini-cli.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="web-search" data-search="scrapling 🕷️ the best web scraping framework that handles everything from a single request to a full-scale crawl! don't... ai ai-scraping automation crawler crawling">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/scrapling.html">Scrapling</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y Scrapling</span>
+          <button onclick="navigator.clipboard.writeText('npx -y Scrapling'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 90,348
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">BSD-3-Clause</span>
+          </div>
+          <a href="/items/scrapling.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="worldmonitor real-time global intelligence dashboard. ai-powered news aggregation, geopolitical monitoring, and infrastruct... agent ai dashboard geopolitics mcp">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/worldmonitor.html">Worldmonitor</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastruct...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y worldmonitor</span>
+          <button onclick="navigator.clipboard.writeText('npx -y worldmonitor'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 89,770
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">AGPL-3.0</span>
+          </div>
+          <a href="/items/worldmonitor.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="databases" data-search="ruflo 🌊 the original agent harness. deploy intelligent multi-player swarms, coordinate autonomous workflows, and bu... agentic-ai agentic-framework agentic-workflow agents ai-agents">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/ruflo.html">Ruflo</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and bu...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y ruflo</span>
+          <button onclick="navigator.clipboard.writeText('npx -y ruflo'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 80,175
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/ruflo.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="context7 context7 platform -- up-to-date docs for ai agents... llm mcp mcp-server vibe-coding">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/context7.html">Context7</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Context7 Platform -- Up-to-date docs for AI agents...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y context7</span>
+          <button onclick="navigator.clipboard.writeText('npx -y context7'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 63,931
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/context7.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="cloud-infra" data-search="trendradar ⭐ai-driven public opinion & trend monitor with multi-platform aggregation, rss, and smart alerts.🎯 告别信息过载，你的 ... ai bark data-analysis docker hot-news">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/trendradar.html">TrendRadar</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          ⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 ...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y TrendRadar</span>
+          <button onclick="navigator.clipboard.writeText('npx -y TrendRadar'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 63,305
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">GPL-3.0</span>
+          </div>
+          <a href="/items/trendradar.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="web-search" data-search="chrome devtools mcp chrome devtools for coding agents... browser chrome chrome-devtools debugging devtools">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/chrome-devtools-mcp.html">Chrome Devtools Mcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Chrome DevTools for coding agents...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y chrome-devtools-mcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y chrome-devtools-mcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 54,466
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/chrome-devtools-mcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="security-audit" data-search="reactive resume a one-of-a-kind resume builder that keeps your privacy in mind. completely secure, customizable, portable, ope... agent-skills ai dsh-plugin hacktoberfest javascript">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/reactive-resume.html">Reactive Resume</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, ope...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y reactive-resume</span>
+          <button onclick="navigator.clipboard.writeText('npx -y reactive-resume'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 45,083
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/reactive-resume.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="cloud-infra" data-search="mcp open source mcp servers for aws... aws mcp mcp-client mcp-clients mcp-host">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/mcp.html">Mcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Open source MCP Servers for AWS...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y mcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y mcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 9,851
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/mcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="awesome mcp servers a collection of mcp servers.... ai mcp">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/awesome-mcp-servers.html">Awesome Mcp Servers</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          A collection of MCP servers....
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y awesome-mcp-servers</span>
+          <button onclick="navigator.clipboard.writeText('npx -y awesome-mcp-servers'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 97,054
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/awesome-mcp-servers.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="github mcp server github's official mcp server... github mcp mcp-server">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/github-mcp-server.html">Github Mcp Server</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          GitHub's official MCP Server...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y github-mcp-server</span>
+          <button onclick="navigator.clipboard.writeText('npx -y github-mcp-server'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 34,074
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/github-mcp-server.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="playwright mcp playwright mcp server... mcp playwright">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/playwright-mcp.html">Playwright Mcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          Playwright MCP server...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y playwright-mcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y playwright-mcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 38,833
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/playwright-mcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="whatsapp mcp whatsapp mcp server... ai mcp whatsapp whatsapp-api">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/whatsapp-mcp.html">Whatsapp Mcp</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          WhatsApp MCP server...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y whatsapp-mcp</span>
+          <button onclick="navigator.clipboard.writeText('npx -y whatsapp-mcp'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 6,770
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">MIT</span>
+          </div>
+          <a href="/items/whatsapp-mcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="item-card bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-5 transition group flex flex-col justify-between" data-category="dev-tools" data-search="ghidramcp mcp server for ghidra... mcp agents ai">
+      <div>
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
+              <a href="/items/ghidramcp.html">GhidraMCP</a>
+            </h3>
+            <span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>
+          </div>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-950 text-emerald-400 border border-emerald-800/60">A+ Security</span>
+        </div>
+
+        <p class="text-slate-400 text-xs leading-relaxed mb-4">
+          MCP Server for Ghidra...
+        </p>
+      </div>
+
+      <div>
+        <div class="bg-slate-950/70 border border-slate-800/80 rounded-lg p-2 font-mono text-[11px] text-slate-300 flex items-center justify-between mb-4 group/cmd">
+          <span class="truncate mr-2 text-slate-400">$ npx -y GhidraMCP</span>
+          <button onclick="navigator.clipboard.writeText('npx -y GhidraMCP'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy', 1500);" class="text-[10px] text-cyan-400 hover:text-white px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 transition">
+            Copy
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-3 border-t border-slate-800/60">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center gap-1 text-slate-300 font-mono">
+              ★ 11,646
+            </span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">Apache-2.0</span>
+          </div>
+          <a href="/items/ghidramcp.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+            Details →
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center py-16">
+      <div class="text-4xl mb-3">🔍</div>
+      <div class="text-white font-bold text-base mb-1">No matching toolchains found</div>
+      <div class="text-slate-400 text-xs">Try searching for "postgres", "browser", or reset filters.</div>
+    </div>
+  </main>
+
+  <!-- Enterprise Monetization Callout -->
+  <section class="border-y border-slate-800 bg-slate-900/40 py-16" id="pricing">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div class="md:col-span-2">
+            <span class="text-cyan-400 font-mono text-xs uppercase tracking-wider font-semibold">ENTERPRISE LICENSE & AUDIT</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2 mb-4">AgentStack Enterprise MCP Atlas & Architecture Guide</h2>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Complete raw JSON database export, spreadsheet CSV license for internal procurement, zero-trust security checklist, and parameterization blueprints for deploying MCP in hardened environments.
+            </p>
+            <div class="flex flex-wrap gap-4 text-xs text-slate-300">
+              <span class="flex items-center gap-1.5">✓ Full Raw JSON / CSV</span>
+              <span class="flex items-center gap-1.5">✓ Security Audit Scores</span>
+              <span class="flex items-center gap-1.5">✓ Sandboxing Runbooks</span>
+            </div>
+          </div>
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 text-center">
+            <div class="text-xs text-slate-400 uppercase font-mono">One-time purchase</div>
+            <div class="text-4xl font-extrabold text-white my-2">$9 <span class="text-xs font-normal text-slate-400">USD</span></div>
+            <div class="text-[11px] text-emerald-400 mb-4 font-mono">Instant Digital Download</div>
+            <a href="https://gumroad.com/l/agentstack-atlas" target="_blank" class="block w-full py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-400 hover:from-cyan-400 hover:to-emerald-300 text-slate-950 font-bold text-xs tracking-wide shadow-lg shadow-cyan-500/20 transition">
+              Get Enterprise Atlas →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup Form -->
+  <section class="max-w-3xl mx-auto px-4 py-16 text-center">
+    <div class="text-2xl font-bold text-white mb-2">Subscribe to the Weekly Agent Intelligence Brief</div>
+    <p class="text-slate-400 text-xs max-w-lg mx-auto mb-6">
+      Every Monday morning, our autonomous research agent summarizes newly launched MCP tools, velocity spikes, and production incident post-mortems.
+    </p>
+    <form action="https://agentstack.substack.com" target="_blank" class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+      <input type="email" placeholder="Enter your work email..." required class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400">
+      <button type="submit" class="px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs rounded-xl transition">
+        Join Free
+      </button>
+    </form>
+    <div class="text-[11px] text-slate-400 mt-3">Zero spam. Unsubscribe at any time with one click.</div>
+  </section>
+
+  
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-12 text-slate-400 text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 font-bold text-white text-base mb-2">
+            ⚡ AgentStack Radar
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm mb-4">
+            The autonomous zero-cost intelligence registry tracking production Model Context Protocol (MCP) servers, agent toolchains, and AI frameworks. Powered continuously by Google Antigravity.
+          </p>
+          <div class="text-[11px] text-slate-400">
+            Strictly $0 infrastructure cost &bull; 100% Autonomous daily updates &bull; MIT Licensed
+          </div>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-xs tracking-wider uppercase mb-3 font-mono">Resources</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://agentstack-radar.pages.dev/rss.xml" class="hover:text-cyan-400 transition">Live RSS Feed</a></li>
+            <li><a href="https://agentstack-radar.pages.dev/sitemap.xml" class="hover:text-cyan-400 transition">XML Sitemap</a></li>
+            <li><a href="https://gumroad.com/l/agentstack-atlas" target="_blank" class="hover:text-cyan-400 transition">Download Enterprise Atlas ($9)</a></li>
+            <li><a href="https://agentstack.substack.com" target="_blank" class="hover:text-cyan-400 transition">Weekly Intelligence Brief</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-xs tracking-wider uppercase mb-3 font-mono">Monetization & Ads</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#sponsor" class="hover:text-cyan-400 transition">Featured Placement ($29/mo)</a></li>
+            <li><a href="https://gumroad.com/l/agentstack-atlas" target="_blank" class="hover:text-cyan-400 transition">Enterprise CSV License</a></li>
+            <li><a href="https://github.com" target="_blank" class="hover:text-cyan-400 transition">GitHub Open Source</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  
+
+  <!-- Client-side filter & search script -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterPills = document.querySelectorAll('.cat-pill');
+    const cards = document.querySelectorAll('.item-card');
+    const resultCount = document.getElementById('resultCount');
+    const emptyState = document.getElementById('emptyState');
+
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    function updateView() {
+      let visible = 0;
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const text = card.getAttribute('data-search');
+
+        const matchesCat = (currentCategory === 'all' || cat === currentCategory);
+        const matchesSearch = (!currentSearch || text.includes(currentSearch));
+
+        if (matchesCat && matchesSearch) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      resultCount.innerText = `Showing ${visible} item${visible === 1 ? '' : 's'}`;
+      if (visible === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value.toLowerCase().trim();
+      updateView();
+    });
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('bg-cyan-500', 'text-slate-950');
+          p.classList.add('bg-slate-900', 'text-slate-300');
+        });
+        pill.classList.remove('bg-slate-900', 'text-slate-300');
+        pill.classList.add('bg-cyan-500', 'text-slate-950');
+
+        currentCategory = pill.getAttribute('data-filter');
+        updateView();
+      });
+    });
+  </script>
+</body>
+</html>

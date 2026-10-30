@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "slug": "edition-1-mcp-revolution",
+    "title": "Edition #1: The Model Context Protocol Standard Hits Critical Mass",
+    "date": "2026-10-30",
+    "summary": "Deep dive into Anthropic's MCP release, how Docker and PostgreSQL are standardizing AI agent context, and top 5 production pitfalls.",
+    "readTime": "4 min read",
+    "highlights": [
+      "Why standardizing JSON-RPC tool calling replaces fragile ad-hoc agent integrations",
+      "Security audit of top 20 public MCP servers",
+      "Benchmarking local filesystem versus remote database latency"
+    ]
+  }
+]
