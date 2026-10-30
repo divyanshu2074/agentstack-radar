@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://agentstack-radar.pages.dev/sitemap.xml
+Sitemap: https://divyanshu2074.github.io/agentstack-radar/sitemap.xml

@@ -7,7 +7,13 @@ const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '..');
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
 
-const SITE_URL = 'https://agentstack-radar.pages.dev';
+const GITHUB_REPO = process.env.GITHUB_REPOSITORY || 'divyanshu2074/agentstack-radar';
+const BASE_PATH = process.env.BASE_PATH !== undefined 
+  ? process.env.BASE_PATH 
+  : (process.env.GITHUB_ACTIONS ? `/${GITHUB_REPO.split('/')[1]}` : '');
+const ROOT_HREF = BASE_PATH ? `${BASE_PATH}/` : '/';
+
+const SITE_URL = process.env.SITE_URL || `https://${GITHUB_REPO.split('/')[0]}.github.io/${GITHUB_REPO.split('/')[1]}`;
 const GUMROAD_BUY_URL = 'https://gumroad.com/l/agentstack-atlas'; // Placeholder for user's Gumroad product link
 const SUBSTACK_URL = 'https://agentstack.substack.com';
 
@@ -15,7 +21,7 @@ function renderHeader(activePage = 'directory') {
   return `
     <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="/" class="flex items-center gap-3 group">
+        <a href="${ROOT_HREF}" class="flex items-center gap-3 group">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 flex items-center justify-center font-black text-slate-950 text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition">
             ⚡
           </div>
@@ -29,7 +35,7 @@ function renderHeader(activePage = 'directory') {
         </a>
 
         <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-          <a href="/" class="${activePage === 'directory' ? 'text-cyan-400' : 'text-slate-300 hover:text-white'} transition">Directory</a>
+          <a href="${ROOT_HREF}" class="${activePage === 'directory' ? 'text-cyan-400' : 'text-slate-300 hover:text-white'} transition">Directory</a>
           <a href="#categories" class="text-slate-300 hover:text-white transition">Categories</a>
           <a href="#pricing" class="text-slate-300 hover:text-white transition">Enterprise Dataset</a>
           <a href="${SUBSTACK_URL}" target="_blank" class="text-slate-300 hover:text-white transition flex items-center gap-1">Newsletter ↗</a>
@@ -92,7 +98,7 @@ function renderItemCard(item) {
         <div class="flex items-start justify-between gap-3 mb-3">
           <div class="flex items-center gap-2">
             <h3 class="font-bold text-white text-base group-hover:text-cyan-400 transition tracking-tight">
-              <a href="/items/${item.slug}.html">${item.name}</a>
+              <a href="${ROOT_HREF}items/${item.slug}.html">${item.name}</a>
             </h3>
             ${item.verified ? '<span title="Verified Architecture" class="text-cyan-400 text-xs">✓</span>' : ''}
           </div>
@@ -121,7 +127,7 @@ function renderItemCard(item) {
             </span>
             <span class="px-1.5 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-400">${item.license}</span>
           </div>
-          <a href="/items/${item.slug}.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
+          <a href="${ROOT_HREF}items/${item.slug}.html" class="text-cyan-400 group-hover:translate-x-0.5 transition font-medium flex items-center gap-1">
             Details →
           </a>
         </div>
@@ -380,7 +386,7 @@ async function build() {
   ${renderHeader('item')}
 
   <main class="max-w-4xl mx-auto px-4 py-12 flex-1 w-full">
-    <a href="/" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-white mb-6 transition">
+    <a href="${ROOT_HREF}" class="inline-flex items-center gap-1.5 text-xs font-mono text-cyan-400 hover:text-white mb-6 transition">
       ← Back to Directory
     </a>
 
@@ -476,9 +482,10 @@ ${sitemapUrls.map(url => `  <url><loc>${url}</loc><lastmod>${new Date().toISOStr
   await fs.writeFile(path.join(DIST_DIR, 'rss.xml'), rssXml, 'utf-8');
   console.log('✅ Generated rss.xml');
 
-  // 5. Generate Robots.txt and _redirects
+  // 5. Generate Robots.txt, _redirects, and .nojekyll
   await fs.writeFile(path.join(DIST_DIR, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`, 'utf-8');
   await fs.writeFile(path.join(DIST_DIR, '_redirects'), `/feed /rss.xml 301\n/atlas /assets/AgentStack-Enterprise-MCP-Atlas.json 200\n`, 'utf-8');
+  await fs.writeFile(path.join(DIST_DIR, '.nojekyll'), '', 'utf-8');
 
   console.log('🎉 [Build] Static build completed successfully in dist/');
 }
