@@ -68,13 +68,13 @@ Total verified components cataloged: 33
 
 ### Rea (A+ Security Rating)
 - **Category**: dev-tools
-- **Stars**: 408,780 | **License**: MIT
+- **Stars**: 408,833 | **License**: MIT
 - **Installation**: `npx -y rea`
 - **Security Posture**: Reverse engineer anything with agents, from app behavior down to native binaries.
 
 ### Nanobot (A+ Security Rating)
 - **Category**: web-search
-- **Stars**: 49,654 | **License**: MIT
+- **Stars**: 49,655 | **License**: MIT
 - **Installation**: `npx -y nanobot`
 - **Security Posture**: Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps
 
@@ -92,7 +92,7 @@ Total verified components cataloged: 33
 
 ### Fastmcp (A+ Security Rating)
 - **Category**: dev-tools
-- **Stars**: 28,240 | **License**: Apache-2.0
+- **Stars**: 28,241 | **License**: Apache-2.0
 - **Installation**: `npx -y fastmcp`
 - **Security Posture**: 🚀 The fast, Pythonic way to build MCP servers and clients.
 
@@ -128,7 +128,7 @@ Total verified components cataloged: 33
 
 ### N8n (A+ Security Rating)
 - **Category**: cloud-infra
-- **Stars**: 209,072 | **License**: NOASSERTION
+- **Stars**: 209,074 | **License**: NOASSERTION
 - **Installation**: `npx -y n8n`
 - **Security Posture**: Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.
 
@@ -140,7 +140,7 @@ Total verified components cataloged: 33
 
 ### Scrapling (A+ Security Rating)
 - **Category**: web-search
-- **Stars**: 90,348 | **License**: BSD-3-Clause
+- **Stars**: 90,350 | **License**: BSD-3-Clause
 - **Installation**: `npx -y Scrapling`
 - **Security Posture**: 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
 
@@ -152,13 +152,13 @@ Total verified components cataloged: 33
 
 ### Ruflo (A+ Security Rating)
 - **Category**: databases
-- **Stars**: 80,175 | **License**: MIT
+- **Stars**: 80,180 | **License**: MIT
 - **Installation**: `npx -y ruflo`
 - **Security Posture**: 🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated
 
 ### Context7 (A+ Security Rating)
 - **Category**: dev-tools
-- **Stars**: 63,931 | **License**: MIT
+- **Stars**: 63,932 | **License**: MIT
 - **Installation**: `npx -y context7`
 - **Security Posture**: Context7 Platform -- Up-to-date docs for AI agents
 
@@ -170,7 +170,7 @@ Total verified components cataloged: 33
 
 ### Chrome Devtools Mcp (A+ Security Rating)
 - **Category**: web-search
-- **Stars**: 54,466 | **License**: Apache-2.0
+- **Stars**: 54,467 | **License**: Apache-2.0
 - **Installation**: `npx -y chrome-devtools-mcp`
 - **Security Posture**: Chrome DevTools for coding agents
 
@@ -212,7 +212,7 @@ Total verified components cataloged: 33
 
 ### GhidraMCP (A+ Security Rating)
 - **Category**: dev-tools
-- **Stars**: 11,646 | **License**: Apache-2.0
+- **Stars**: 11,647 | **License**: Apache-2.0
 - **Installation**: `npx -y GhidraMCP`
 - **Security Posture**: MCP Server for Ghidra
 
